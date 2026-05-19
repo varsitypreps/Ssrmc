@@ -1,24 +1,86 @@
-/* OVERRIDE FOR NEW IMAGE MAP */
-.la-card {
-    min-height: auto !important;
-    padding: 20px;
-    background: #0a0a0a;
-    border: 1px solid #333;
-    border-radius: 12px;
-    overflow: visible;
+.la-card{
+  position:relative;
+  min-height:520px;
+  border:1px solid rgba(211,32,32,.35);
+  background:
+    radial-gradient(circle at 20% 18%,rgba(211,32,32,.18),transparent 35%),
+    linear-gradient(145deg,#070707,#121214);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  padding:40px;
 }
 
-.la-card img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
-    display: block;
+.la-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,.02),
+      rgba(0,0,0,.18)
+    );
+  pointer-events:none;
 }
 
-.map-caption {
-    margin-top: 15px;
-    font-size: 1.15rem;
-    color: #ddd;
+.la-card img{
+  position:relative;
+  z-index:2;
+  width:min(100%,620px);
+  display:block;
+  margin:auto;
+  filter:
+    drop-shadow(0 18px 40px rgba(0,0,0,.65))
+    drop-shadow(0 0 28px rgba(211,32,32,.18));
+  transition:transform .45s ease;
+}
+
+.la-card:hover img{
+  transform:scale(1.02);
+}
+
+.map-caption{
+  position:absolute;
+  left:28px;
+  bottom:24px;
+  z-index:3;
+  font-family:Oswald,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.28em;
+  color:#8f8f8f;
+  font-size:11px;
+}
+
+.map-caption b{
+  display:block;
+  margin-top:6px;
+  color:#fff;
+  font-family:'Playfair Display SC',serif;
+  font-size:28px;
+  letter-spacing:.05em;
+}
+
+@media (max-width:768px){
+
+  .la-card{
+    min-height:420px;
+    padding:26px;
+  }
+
+  .la-card img{
+    width:100%;
+    max-width:500px;
+  }
+
+  .map-caption{
+    left:18px;
+    bottom:18px;
+    font-size:10px;
+  }
+
+  .map-caption b{
+    font-size:22px;
+  }
 }
