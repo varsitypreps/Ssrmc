@@ -1,1 +1,74 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gallery — South Side Rydaz MC</title><link rel="stylesheet" href="style.css"></head><body><nav class="site-nav"><a class="brand" href="index.html"><img src="images/patch.jpeg" alt="South Side Rydaz patch"><span><b>SSR MC</b><span>South Side Rydaz</span></span></a><button class="menu-toggle">MENU</button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="events.html">Events</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="brotherhood.html">Brotherhood</a></li><li><a href="contact.html">Contact</a></li></ul></nav><header class="page-hero"><div class="section-inner"><p class="eyebrow">South Side Rydaz MC</p><h1>Gallery<br><em>The Ride</em></h1></div></header><section class="section"><div class="section-inner"><div class="section-head"><div><p class="eyebrow">Photos</p><h2>The Life<br><em>We Live</em></h2></div><a class="btn" href="contact.html">Send Photos →</a></div><div class="gallery-strip"><div style="background-image:url('images/panel-gallery.jpg')"></div><div style="background-image:url('images/panel-brotherhood.jpg')"></div><div style="background-image:url('images/panel-events.jpg')"></div></div><br><div class="gallery-strip"><div style="background-image:url('images/hero-bg.jpg')"></div><div style="background-image:url('images/event-1.jpg')"></div><div style="background-image:url('images/panel-merch.jpg')"></div></div></div></section><footer><div class="footer-top"><a class="brand" href="index.html"><img src="images/patch.jpeg" alt="SSR patch"><span><b>South Side Rydaz MC</b><span>Shreveport, Louisiana</span></span></a><div class="footer-links"><a href="about.html">About</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="brotherhood.html">Brotherhood</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom">© 2026 South Side Rydaz MC. No Lanes. No Limits. Just Loyalty.</div></footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — South Side Rydaz MC</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+            transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+        .gallery-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="site-nav">
+        <a class="brand" href="index.html">
+            <img src="patch.jpeg" alt="South Side Rydaz MC">
+            <span>SSR MC</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a class="active" href="gallery.html">GALLERY</a></li>
+            <li><a href="brotherhood.html">BROTHERHOOD</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-header">
+        <h1>GALLERY</h1>
+        <p>The Life We Live • South Side Rydaz MC</p>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- All images from gallerypic folder will go here -->
+        <img src="gallerypic/IMG_0804.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_0848.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2282.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2294.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2309.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2310.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2311.jpeg" alt="South Side Rydaz">
+        <img src="gallerypic/IMG_2312.jpeg" alt="South Side Rydaz">
+        <!-- Add more as you upload them -->
+    </div>
+
+    <footer style="background:#000; padding:40px 20px; text-align:center; border-top: 2px solid #c00;">
+        <p>&copy; 2026 South Side Rydaz MC • Shreveport, Louisiana</p>
+        <p>No Lanes. No Limits. Just Loyalty.</p>
+    </footer>
+
+</body>
+</html>
