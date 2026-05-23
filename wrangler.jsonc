@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "southsiderydaz-new",
+  "name": "ssrmc",
   "compatibility_date": "2026-05-17",
   "observability": {
     "enabled": true
